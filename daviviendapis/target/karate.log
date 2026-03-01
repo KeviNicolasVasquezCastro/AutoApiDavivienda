@@ -1,0 +1,933 @@
+21:53:50.875 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:53:50.881 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+21:53:51.492 [pool-2-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+21:53:51.492 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+21:53:51.492 [pool-2-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+21:53:51.650 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > GET https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?limit=14&offset=0&empNumber=169
+1 > Host: opensource-demo.orangehrmlive.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:53:51.651 [pool-2-thread-3] DEBUG com.intuit.karate - request:
+1 > POST https://jsonplaceholder.typicode.com/users
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 160
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test User","username":"testuser","email":"test@user.com","address":{"street":"Has No Name","suite":"Apt. 123","city":"Electri","zipcode":"54321-6789"}}
+
+21:53:51.650 [pool-2-thread-2] DEBUG com.intuit.karate - request:
+1 > GET https://jsonplaceholder.typicode.com/users
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:53:51.954 [pool-2-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 301
+1 < 201
+1 < Date: Sun, 01 Mar 2026 02:53:51 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 216
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < access-control-expose-headers: Location
+1 < Cache-Control: no-cache
+1 < etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < expires: -1
+1 < location: https://jsonplaceholder.typicode.com/users/11
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=OiYGsT6O5TEo%2Fjt5fmUMTGE2dhbhIhh1I5P7MhiEqdk%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1772333631"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=OiYGsT6O5TEo%2Fjt5fmUMTGE2dhbhIhh1I5P7MhiEqdk%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1772333631"
+1 < Server: cloudflare
+1 < vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 999
+1 < x-ratelimit-reset: 1772333673
+1 < cf-cache-status: DYNAMIC
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=2,cfOrigin;dur=24
+1 < CF-RAY: 9d54dfaecc9ab136-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+21:53:51.956 [pool-2-thread-3] INFO  com.intuit.karate - [print] created id is:  11 
+21:53:52.010 [pool-2-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 293
+1 < 200
+1 < Date: Sun, 01 Mar 2026 02:53:51 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < Cache-Control: max-age=43200
+1 < etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"
+1 < expires: -1
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=C0Lg43xAM%2FQgL5JzfBi9xSKQx7Z0hLvNYy4r1r%2B7PK4%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1770696528"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=C0Lg43xAM%2FQgL5JzfBi9xSKQx7Z0hLvNYy4r1r%2B7PK4%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1770696528"
+1 < Server: cloudflare
+1 < vary: Origin, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 999
+1 < x-ratelimit-reset: 1770696570
+1 < Age: 4189
+1 < Accept-Ranges: bytes
+1 < cf-cache-status: HIT
+1 < Server-Timing: cfCacheStatus;desc="HIT"
+1 < Server-Timing: cfEdge;dur=8,cfOrigin;dur=0
+1 < CF-RAY: 9d54dfaedb0a3a30-TPA
+1 < alt-svc: h3=":443"; ma=86400
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+
+21:53:52.019 [pool-2-thread-2] DEBUG com.intuit.karate - request:
+2 > GET https://jsonplaceholder.typicode.com/users/1
+2 > Host: jsonplaceholder.typicode.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+2 > Accept-Encoding: gzip,deflate
+
+
+21:53:52.382 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 727
+1 < 401
+1 < Server: nginx
+1 < Date: Sun, 01 Mar 2026 02:53:52 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Set-Cookie: orangehrm=nqeahguhmin4t3cvk20bjq9ekk; path=/; SameSite=noneweb; secure; HttpOnly; SameSite=Lax
+1 < Cache-Control: no-cache, private
+{"error":{"status":401,"message":"Session expired"}}
+
+21:53:52.386 [pool-2-thread-1] ERROR com.intuit.karate - classpath:examples/users/consultaEmpleado.feature:12
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 727, url: https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?limit=14&offset=0&empNumber=169, response: 
+{"error":{"status":401,"message":"Session expired"}}
+classpath:examples/users/consultaEmpleado.feature:12
+21:53:52.415 [pool-2-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 394
+2 < 200
+2 < Date: Sun, 01 Mar 2026 02:53:52 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < access-control-allow-credentials: true
+2 < Cache-Control: max-age=43200
+2 < etag: W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"
+2 < expires: -1
+2 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+2 < pragma: no-cache
+2 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=0rCE5pjoqG2CeGQbGRnlqgmAirPgjAGqznRto1xGc5M%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1772292927"}],"max_age":3600}
+2 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=0rCE5pjoqG2CeGQbGRnlqgmAirPgjAGqznRto1xGc5M%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1772292927"
+2 < Server: cloudflare
+2 < vary: Origin, Accept-Encoding
+2 < via: 2.0 heroku-router
+2 < x-content-type-options: nosniff
+2 < x-powered-by: Express
+2 < x-ratelimit-limit: 1000
+2 < x-ratelimit-remaining: 950
+2 < x-ratelimit-reset: 1772292965
+2 < Server-Timing: cfCacheStatus;desc="REVALIDATED"
+2 < Server-Timing: cfEdge;dur=101,cfOrigin;dur=89
+2 < cf-cache-status: REVALIDATED
+2 < CF-RAY: 9d54dfb0a90eefc7-TPA
+2 < alt-svc: h3=":443"; ma=86400
+{
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+21:53:52.668 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:examples/users/consultaEmpleado.feature
+21:53:52.715 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:examples/users/users.feature
+21:54:43.846 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:54:44.481 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:54:44.621 [main] DEBUG com.intuit.karate - request:
+1 > GET https://jsonplaceholder.typicode.com/users
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:54:44.982 [main] DEBUG com.intuit.karate - response time in milliseconds: 303
+1 < 200
+1 < Date: Sun, 01 Mar 2026 02:54:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < Cache-Control: max-age=43200
+1 < etag: W/"160d-1eMSsxeJRfnVLRBmYJSbCiJZ1qQ"
+1 < expires: -1
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=C0Lg43xAM%2FQgL5JzfBi9xSKQx7Z0hLvNYy4r1r%2B7PK4%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1770696528"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=C0Lg43xAM%2FQgL5JzfBi9xSKQx7Z0hLvNYy4r1r%2B7PK4%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1770696528"
+1 < Server: cloudflare
+1 < vary: Origin, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 999
+1 < x-ratelimit-reset: 1770696570
+1 < Age: 4242
+1 < Accept-Ranges: bytes
+1 < cf-cache-status: HIT
+1 < Server-Timing: cfCacheStatus;desc="HIT"
+1 < Server-Timing: cfEdge;dur=12,cfOrigin;dur=0
+1 < CF-RAY: 9d54e0f9ea8acc76-TPA
+1 < alt-svc: h3=":443"; ma=86400
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "username": "Antonette",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "geo": {
+        "lat": "-43.9509",
+        "lng": "-34.4618"
+      }
+    },
+    "phone": "010-692-6593 x09125",
+    "website": "anastasia.net",
+    "company": {
+      "name": "Deckow-Crist",
+      "catchPhrase": "Proactive didactic contingency",
+      "bs": "synergize scalable supply-chains"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "username": "Samantha",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "geo": {
+        "lat": "-68.6102",
+        "lng": "-47.0653"
+      }
+    },
+    "phone": "1-463-123-4447",
+    "website": "ramiro.info",
+    "company": {
+      "name": "Romaguera-Jacobson",
+      "catchPhrase": "Face to face bifurcated interface",
+      "bs": "e-enable strategic applications"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "username": "Karianne",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "Hoeger Mall",
+      "suite": "Apt. 692",
+      "city": "South Elvis",
+      "zipcode": "53919-4257",
+      "geo": {
+        "lat": "29.4572",
+        "lng": "-164.2990"
+      }
+    },
+    "phone": "493-170-9623 x156",
+    "website": "kale.biz",
+    "company": {
+      "name": "Robel-Corkery",
+      "catchPhrase": "Multi-tiered zero tolerance productivity",
+      "bs": "transition cutting-edge web services"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "username": "Kamren",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "revolutionize end-to-end systems"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "username": "Leopoldo_Corkery",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "Norberto Crossing",
+      "suite": "Apt. 950",
+      "city": "South Christy",
+      "zipcode": "23505-1337",
+      "geo": {
+        "lat": "-71.4197",
+        "lng": "71.7478"
+      }
+    },
+    "phone": "1-477-935-8478 x6430",
+    "website": "ola.org",
+    "company": {
+      "name": "Considine-Lockman",
+      "catchPhrase": "Synchronised bottom-line interface",
+      "bs": "e-enable innovative applications"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "username": "Elwyn.Skiles",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "Rex Trail",
+      "suite": "Suite 280",
+      "city": "Howemouth",
+      "zipcode": "58804-1099",
+      "geo": {
+        "lat": "24.8918",
+        "lng": "21.8984"
+      }
+    },
+    "phone": "210.067.6132",
+    "website": "elvis.io",
+    "company": {
+      "name": "Johns Group",
+      "catchPhrase": "Configurable multimedia task-force",
+      "bs": "generate enterprise e-tailers"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "username": "Maxime_Nienow",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "Ellsworth Summit",
+      "suite": "Suite 729",
+      "city": "Aliyaview",
+      "zipcode": "45169",
+      "geo": {
+        "lat": "-14.3990",
+        "lng": "-120.7677"
+      }
+    },
+    "phone": "586.493.6943 x140",
+    "website": "jacynthe.com",
+    "company": {
+      "name": "Abernathy Group",
+      "catchPhrase": "Implemented secondary concept",
+      "bs": "e-enable extensible e-tailers"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "username": "Delphine",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "Dayna Park",
+      "suite": "Suite 449",
+      "city": "Bartholomebury",
+      "zipcode": "76495-3109",
+      "geo": {
+        "lat": "24.6463",
+        "lng": "-168.8889"
+      }
+    },
+    "phone": "(775)976-6794 x41206",
+    "website": "conrad.com",
+    "company": {
+      "name": "Yost and Sons",
+      "catchPhrase": "Switchable contextually-based project",
+      "bs": "aggregate real-time technologies"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "username": "Moriah.Stanton",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "target end-to-end models"
+    }
+  }
+]
+
+21:54:45.007 [main] DEBUG com.intuit.karate - request:
+2 > GET https://jsonplaceholder.typicode.com/users/1
+2 > Host: jsonplaceholder.typicode.com
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+2 > Accept-Encoding: gzip,deflate
+
+
+21:54:45.196 [main] DEBUG com.intuit.karate - response time in milliseconds: 188
+2 < 200
+2 < Date: Sun, 01 Mar 2026 02:54:45 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < access-control-allow-credentials: true
+2 < Cache-Control: max-age=43200
+2 < etag: W/"1fd-+2Y3G3w049iSZtw5t1mzSnunngE"
+2 < expires: -1
+2 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+2 < pragma: no-cache
+2 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=0rCE5pjoqG2CeGQbGRnlqgmAirPgjAGqznRto1xGc5M%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1772292927"}],"max_age":3600}
+2 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=0rCE5pjoqG2CeGQbGRnlqgmAirPgjAGqznRto1xGc5M%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1772292927"
+2 < Server: cloudflare
+2 < vary: Origin, Accept-Encoding
+2 < via: 2.0 heroku-router
+2 < x-content-type-options: nosniff
+2 < x-powered-by: Express
+2 < x-ratelimit-limit: 1000
+2 < x-ratelimit-remaining: 950
+2 < x-ratelimit-reset: 1772292965
+2 < Age: 52
+2 < Server-Timing: cfCacheStatus;desc="HIT"
+2 < Server-Timing: cfEdge;dur=4,cfOrigin;dur=0
+2 < cf-cache-status: HIT
+2 < CF-RAY: 9d54e0fbba18cc76-TPA
+2 < alt-svc: h3=":443"; ma=86400
+{
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret",
+  "email": "Sincere@april.biz",
+  "address": {
+    "street": "Kulas Light",
+    "suite": "Apt. 556",
+    "city": "Gwenborough",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-770-736-8031 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "Romaguera-Crona",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "harness real-time e-markets"
+  }
+}
+
+21:54:45.206 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:54:45.237 [main] DEBUG com.intuit.karate - request:
+1 > POST https://jsonplaceholder.typicode.com/users
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 160
+1 > Host: jsonplaceholder.typicode.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Test User","username":"testuser","email":"test@user.com","address":{"street":"Has No Name","suite":"Apt. 123","city":"Electri","zipcode":"54321-6789"}}
+
+21:54:45.484 [main] DEBUG com.intuit.karate - response time in milliseconds: 247
+1 < 201
+1 < Date: Sun, 01 Mar 2026 02:54:45 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 216
+1 < Connection: keep-alive
+1 < access-control-allow-credentials: true
+1 < access-control-expose-headers: Location
+1 < Cache-Control: no-cache
+1 < etag: W/"d8-pYV7+YuMGP2hxHPU9ARrf97ifDA"
+1 < expires: -1
+1 < location: https://jsonplaceholder.typicode.com/users/11
+1 < nel: {"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}
+1 < pragma: no-cache
+1 < report-to: {"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=V6TBGBpuNFBpocSsx46MNRRLZpxjNlAy%2BKs8wIV5pXA%3D\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\u0026ts=1772333685"}],"max_age":3600}
+1 < reporting-endpoints: heroku-nel="https://nel.heroku.com/reports?s=V6TBGBpuNFBpocSsx46MNRRLZpxjNlAy%2BKs8wIV5pXA%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1772333685"
+1 < Server: cloudflare
+1 < vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+1 < via: 2.0 heroku-router
+1 < x-content-type-options: nosniff
+1 < x-powered-by: Express
+1 < x-ratelimit-limit: 1000
+1 < x-ratelimit-remaining: 999
+1 < x-ratelimit-reset: 1772333733
+1 < cf-cache-status: DYNAMIC
+1 < Server-Timing: cfCacheStatus;desc="DYNAMIC"
+1 < Server-Timing: cfEdge;dur=4,cfOrigin;dur=80
+1 < CF-RAY: 9d54e0fd0e7de8e8-MIA
+1 < alt-svc: h3=":443"; ma=86400
+{
+  "name": "Test User",
+  "username": "testuser",
+  "email": "test@user.com",
+  "address": {
+    "street": "Has No Name",
+    "suite": "Apt. 123",
+    "city": "Electri",
+    "zipcode": "54321-6789"
+  },
+  "id": 11
+}
+
+21:54:45.487 [main] INFO  com.intuit.karate - [print] created id is:  11 
+21:55:03.308 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:55:03.920 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:55:04.058 [main] DEBUG com.intuit.karate - request:
+1 > GET https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?limit=14&offset=0&empNumber=169
+1 > Host: opensource-demo.orangehrmlive.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+
+
+21:55:04.780 [main] DEBUG com.intuit.karate - response time in milliseconds: 718
+1 < 401
+1 < Server: nginx
+1 < Date: Sun, 01 Mar 2026 02:55:04 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Set-Cookie: orangehrm=v8ifqm9unpmg0aagjgm4eann0l; path=/; SameSite=noneweb; secure; HttpOnly; SameSite=Lax
+1 < Cache-Control: no-cache, private
+{"error":{"status":401,"message":"Session expired"}}
+
+21:55:04.799 [main] ERROR com.intuit.karate - classpath:examples/users/consultaEmpleado.feature:12
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 718, url: https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?limit=14&offset=0&empNumber=169, response: 
+{"error":{"status":401,"message":"Session expired"}}
+classpath:examples/users/consultaEmpleado.feature:12
+21:57:18.700 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+21:57:19.339 [main] INFO  com.intuit.karate - karate.env system property was: null 
+21:57:19.522 [main] DEBUG com.intuit.karate - request:
+1 > POST https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/auth/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 42
+1 > Host: opensource-demo.orangehrmlive.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+{"username":"Admin","password":"admin123"}
+
+21:57:20.528 [main] DEBUG com.intuit.karate - response time in milliseconds: 1003
+1 < 404
+1 < Server: nginx
+1 < Date: Sun, 01 Mar 2026 02:57:20 GMT
+1 < Content-Type: text/html; charset=UTF-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Set-Cookie: orangehrm=9iivajsnoc12ef2pi03b39loo2; path=/; SameSite=noneweb; secure; HttpOnly; SameSite=Lax
+1 < Cache-Control: no-cache, private
+
+
+21:57:20.534 [main] ERROR com.intuit.karate - classpath:examples/users/consultaEmpleado.feature:12
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 1003, url: https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/auth/login, response: 
+
+classpath:examples/users/consultaEmpleado.feature:12
+22:09:19.642 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:09:20.246 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:09:20.512 [main] DEBUG com.intuit.karate - request:
+1 > POST https://opensource-demo.orangehrmlive.com/web/index.php/oauth/issueToken
+1 > Content-Type: application/x-www-form-urlencoded
+1 > Content-Length: 137
+1 > Host: opensource-demo.orangehrmlive.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+client_id=2b8a190921c65d1c7b4079b2bca6d61f&client_secret=QMW3PLQ3gkXOqIUd5cBH4G9Univ%2FV%2BYuxwyn7yzsKpY%3D&grant_type=client_credentials
+
+22:09:22.534 [main] DEBUG com.intuit.karate - response time in milliseconds: 2019
+1 < 404
+1 < Server: nginx
+1 < Date: Sun, 01 Mar 2026 03:09:22 GMT
+1 < Content-Type: text/html; charset=UTF-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Set-Cookie: orangehrm=gmjq9k8o8iudh4miv5mk28tef0; path=/; SameSite=noneweb; secure; HttpOnly; SameSite=Lax
+1 < Cache-Control: no-cache, private
+
+
+22:09:22.539 [main] ERROR com.intuit.karate - classpath:examples/users/consultaEmpleado.feature:15
+Then status 200
+status code was: 404, expected: 200, response time in milliseconds: 2019, url: https://opensource-demo.orangehrmlive.com/web/index.php/oauth/issueToken, response: 
+
+classpath:examples/users/consultaEmpleado.feature:15
+22:17:00.901 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:17:01.505 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:17:01.642 [main] DEBUG com.intuit.karate - request:
+1 > GET https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?nameOrId=kevin
+1 > Cookie: PHPSESSID=TU_SESION_COPIADA_AQUI
+1 > Host: opensource-demo.orangehrmlive.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:17:02.549 [main] DEBUG com.intuit.karate - response time in milliseconds: 902
+1 < 401
+1 < Server: nginx
+1 < Date: Sun, 01 Mar 2026 03:17:02 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Set-Cookie: orangehrm=1paes3kcc28e09i7skun44f747; path=/; SameSite=noneweb; secure; HttpOnly; SameSite=Lax
+1 < Cache-Control: no-cache, private
+{"error":{"status":401,"message":"Session expired"}}
+
+22:17:02.567 [main] ERROR com.intuit.karate - classpath:examples/users/consultaEmpleado.feature:8
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 902, url: https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?nameOrId=kevin, response: 
+{"error":{"status":401,"message":"Session expired"}}
+classpath:examples/users/consultaEmpleado.feature:8
+22:20:31.174 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+22:20:31.810 [main] INFO  com.intuit.karate - karate.env system property was: null 
+22:20:31.951 [main] DEBUG com.intuit.karate - request:
+1 > GET https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?nameOrId=kevin
+1 > Cookie: PHPSESSID=TU_SESION_COPIADA_AQUI
+1 > Host: opensource-demo.orangehrmlive.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
+1 > Accept-Encoding: gzip,deflate
+
+
+22:20:32.819 [main] DEBUG com.intuit.karate - response time in milliseconds: 864
+1 < 401
+1 < Server: nginx
+1 < Date: Sun, 01 Mar 2026 03:20:32 GMT
+1 < Content-Type: application/json
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Set-Cookie: orangehrm=mf1mtghmicaujuhjpqs6rjbr7v; path=/; SameSite=noneweb; secure; HttpOnly; SameSite=Lax
+1 < Cache-Control: no-cache, private
+{"error":{"status":401,"message":"Session expired"}}
+
+22:20:32.838 [main] ERROR com.intuit.karate - classpath:examples/users/consultaEmpleado.feature:8
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 864, url: https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/directory/employees?nameOrId=kevin, response: 
+{"error":{"status":401,"message":"Session expired"}}
+classpath:examples/users/consultaEmpleado.feature:8
